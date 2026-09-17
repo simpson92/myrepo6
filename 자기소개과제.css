@@ -1,0 +1,38 @@
+* {box-sizing: border-box;}
+
+input[type="text"] {background: transparent; border: none; font-family: 'Jua', sans-serif; font-size: 16px;}
+
+body {width: 100vw; height: 100vh; display: grid; justify-content: center; align-items: center; background-color: rgb(202, 129, 129);}
+
+.container {width: 1000px; height: 900px; margin: auto; background-color: bisque; margin: 40px auto 0;
+    display: grid; grid-template-rows: 0.7fr 2.3fr; grid-template-columns: 1fr; 
+    border: 0px solid black; border-radius: 20px 20px 20px 20px;}
+
+.box1 {display: grid; grid-template-rows: 1fr; grid-template-columns: 3.5fr 1.5fr; 
+    justify-content: center; align-items: center;}
+
+.box1-1 {display: grid; justify-content: end; align-items: center; font-size: 40px;}
+.box1-2 {display: grid; justify-content: center; align-content: center; row-gap: 5px;}
+
+.box2 {display: grid; grid-template-rows: 1fr; grid-template-columns: 3fr 5fr;}
+
+.box2-1 {display: grid; grid-template-rows: 1fr 4fr; grid-template-columns: 1fr; 
+    & > div:nth-child(1) {display: grid; place-content: center; font-size: 25px; 
+        & > div {border: 5px solid brown; border-radius: 20px 20px 20px 20px; padding: 20px;}} 
+    & > div:nth-child(2) {display: grid; justify-items: center; align-items: center; 
+        & > div {border: 0px solid black; border-radius: 20px 20px 20px 20px; background-color: rgb(109, 212, 115); padding: 10px;}}}
+.box2-2 {display: grid; grid-template-rows: 1fr 2fr; grid-template-columns: 1fr;}
+
+.images {display: grid; grid-template-rows: 1fr 4fr; grid-template-columns: 1fr;
+    img {width: 100%; height: 100%; object-fit: cover;} 
+    & > div:nth-child(1) {display: grid; place-content: center; font-size: 25px; 
+        & > div {border: 3.5px solid brown; border-radius: 20px 20px 20px 20px; padding: 4px;}} 
+    & > div:nth-child(2) {display: grid; place-content: center; column-gap: 5px; grid-template-rows: 140px; grid-template-columns: repeat(4, 130px);}}
+.video {display: grid; grid-template-rows: 1fr 7fr; grid-template-columns: 1fr;
+    video {width: 100%; height: 100%; object-fit: cover;}
+    & > div:nth-child(1) {display: grid; place-content: center; font-size: 25px; 
+        & > div {border: 3.5px solid brown; border-radius: 20px 20px 20px 20px; padding: 4px;}} 
+    & > div:nth-child(2) {display: grid; place-content: center;}}
+
+
+
